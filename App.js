@@ -1,5 +1,13 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 // React Element
-const heading = React.createElement("h1", { id: "heading" }, "Hello, World! Namaste React ");
+//const heading = React.createElement("h1", { id: "heading" }, "Hello, World! Namaste React ");
+// React.createElement => Object => HTMLElement(render)
+
+// jsx --> javascript syntax 
+const jsxheading = <h1 id="heading">Hello, Priyansha </h1>
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(jsxheading);
