@@ -19,6 +19,9 @@ const heading = React.createElement("h1", { id: "heading" }, "Hello, World! Nama
 // React Functional Component
 const HeadingComponent = () => (
     <div id="container">
+        <h2> {num + number}</h2>
+        <AnimalName />
+        <h3> console.log("Just learning and testing ")</h3>
         <h1 className="heading"> Namaste Priyansha Ji </h1>
     </div>
 
@@ -37,10 +40,12 @@ function AnimalImage() {
 function AnimalDetails() {
     return <p>Dog • 3 years old • Friendly</p>;
 }
-
+const number = 1000;
+let num = 2
 const AnimalCard = () => {
     return (
         <div>
+            {num + number}
             <AnimalImage />
             <AnimalName />
             <AnimalDetails />
