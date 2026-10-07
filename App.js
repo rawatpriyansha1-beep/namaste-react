@@ -56,6 +56,12 @@ const Body = () => {
     );
 }
 
+const Footer = () => {
+    return (
+        <div></div>
+    );
+}
+
 const Applayout = () => {
     return (
         <div className="app">
