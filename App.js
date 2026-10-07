@@ -36,12 +36,32 @@ const Header = () => {
     );
 }
 
-const RestrauntCard = () => {
+const RestrauntCard = (props) => {
+    const { resData } = props; // props destructuring and further using resData 
+    const { resName, cuisine, rating } = resData?.data;
     return (
         <div className="res-card">
-            <h3>Meghana Foods</h3>
+            <img className="res-logo"
+                alt="res-logo"
+                src="https://www.ruchiskitchen.com/wp-content/uploads/2019/01/Shahi-Veg-Biryani-Recipe-01.jpg"
+            />
+            <h3>{resName}</h3>
+            <h4>{cuisine.join(", ")}</h4>
+            <h4>{rating}</h4>
+            <h4>{deliverytime}</h4>
+            <h4>{resData.data.deliverytime}</h4>
         </div>
     );
+}
+
+const resObj = {
+    type: "restraunt",
+    data: {
+        resName: "Meghana Foods",
+        cuisine: ["Biryani", "North Indian", "Asian", "Comfort Food"],
+        rating: "4.4 starts",
+        deliverytime: "38 minutes"
+    }
 }
 
 const Body = () => {
@@ -50,7 +70,9 @@ const Body = () => {
             Search
         </div>
         <div className="restrauntContainer">
-            <RestrauntCard />
+            <RestrauntCard
+                const resData={resObj}
+            />
         </div>
     </div>
     );
