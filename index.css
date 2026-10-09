@@ -42,8 +42,14 @@
     width: 100%;
 }
 
-.restrauntContainer {
+.res-container {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
+}
+
+.filter-button {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
 }
